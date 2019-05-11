@@ -219,15 +219,6 @@
                                         <nav class="BreadcrumbsBox">
                                             {breadcrumbs}
                                         </nav>
-                                        {if !$SectionGroups}
-                                            <div class="SearchBox js-sphinxAutoComplete" role="search">
-                                                {if $hasAdvancedSearch === true}
-                                                    {module name="AdvancedSearchModule"}
-                                                {else}
-                                                    {searchbox}
-                                                {/if}
-                                            </div>
-                                        {/if}
                                     </div>
                                 {/if}
                                 <div class="Frame-row">
@@ -275,6 +266,15 @@
 
                                     <!---------- Main Panel ---------->
                                     <aside class="Panel Panel-main">
+				      {if !$SectionGroups}
+                                            <div class="SearchBox js-sphinxAutoComplete" role="search">
+                                                {if $hasAdvancedSearch === true}
+                                                    {module name="AdvancedSearchModule"}
+                                                {else}
+                                                    {searchbox}
+                                                {/if}
+                                            </div>
+                                        {/if}
                                         {asset name="Panel"}
                                     </aside>
                                     <!---------- Main Panel END ---------->
